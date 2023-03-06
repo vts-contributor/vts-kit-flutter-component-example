@@ -1,14 +1,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:vts_component/vts_component.dart';
+import 'package:vts_flutter_demo_pendo/components/demo_appbar.dart';
 
 class ShimmerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("VTS Shimmer - change after 3s"),
-      ),
+      appBar: DemoAppbar(title: 'Shimmer'),
       body: Container(
         padding: EdgeInsets.all(20),
         alignment: Alignment.center,
