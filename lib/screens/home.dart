@@ -1,14 +1,10 @@
-import 'dart:io';
-
-import 'package:android_id/android_id.dart';
-import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:pendo_sdk/pendo_sdk.dart';
-import 'package:vts_component/common/style/vts_common.dart';
 import 'package:vts_component/vts_component.dart';
 import 'package:vts_flutter_demo_pendo/components/demo_appbar.dart';
 import 'package:vts_flutter_demo_pendo/screens/dropdowns/dropdown_types.dart';
+import 'package:vts_flutter_demo_pendo/screens/progress_bar/progress_bar.dart';
+import 'package:vts_flutter_demo_pendo/screens/rating_bar/rating_bar.dart';
+import 'package:vts_flutter_demo_pendo/screens/shimmer/shimmer.dart';
 import '../screens/accordian/accordian.dart';
 import '../screens/avatar/avatars.dart';
 import '../screens/badges/badges.dart';
@@ -144,6 +140,21 @@ class _HomePageState extends State<HomePage> {
       ),
       'title': 'Search Bar',
       'route': SearchbarPage()
+    },
+    {
+      'icon': Icons.downloading,
+      'title': 'Progress Bar',
+      'route': ProgressBarPage()
+    },
+    {
+      'icon': Icons.star_border_rounded,
+      'title': 'Rating Bar',
+      'route': RatingBarPage()
+    },
+    {
+      'icon': Icons.blur_linear_rounded,
+      'title': 'Shimmer',
+      'route': ShimmerPage()
     },
     // {
     //   'icon': const IconData(

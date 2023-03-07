@@ -16,7 +16,10 @@ import 'package:vts_flutter_demo_pendo/screens/dropdowns/dropdown_single_select.
 import 'package:vts_flutter_demo_pendo/screens/dropdowns/dropdown_types.dart';
 import 'package:vts_flutter_demo_pendo/screens/home.dart';
 import 'package:vts_flutter_demo_pendo/screens/images/images.dart';
+import 'package:vts_flutter_demo_pendo/screens/progress_bar/progress_bar.dart';
+import 'package:vts_flutter_demo_pendo/screens/rating_bar/rating_bar.dart';
 import 'package:vts_flutter_demo_pendo/screens/searchbar/seachbar.dart';
+import 'package:vts_flutter_demo_pendo/screens/shimmer/shimmer.dart';
 import 'package:vts_flutter_demo_pendo/screens/tabs/bottom_icon_tab.dart';
 import 'package:vts_flutter_demo_pendo/screens/tabs/bottom_label_tab.dart';
 import 'package:vts_flutter_demo_pendo/screens/tabs/icon_tabs.dart';
@@ -67,6 +70,10 @@ class AppRoute{
     '/dropdown_type': (_) => DropdownTypes(),
     '/single_select': (_) => DropDownSingleSelect(),
     '/multi_select': (_) => DropDownMultipleSelect(),
+
+    '/shimmer': (_) => ShimmerPage(),
+    '/rating': (_) => RatingBarPage(),
+    '/progress': (_) => ProgressBarPage(),
 
     '/search_bar': (_) => SearchbarPage()
   };
