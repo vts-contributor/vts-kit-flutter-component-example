@@ -18,12 +18,12 @@ class ShimmerPage extends StatelessWidget {
             if (snapshot.hasData) {
               return Row(children: [
                 Container(
-                  width: 50,
-                  height: 50,
+                  width: 75,
+                  height: 75,
                   margin: EdgeInsets.only(right: 10),
                   child: Image.network(
                     "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg/220px-Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg",
-                    fit: BoxFit.fill,
+                    fit: BoxFit.cover,
                   ),
                 ),
                 Expanded(
@@ -32,7 +32,7 @@ class ShimmerPage extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(snapshot.data!),
-                      SizedBox(height: 10),
+                      SizedBox(height: 20),
                       Text(snapshot.data!),
                     ],
                   ),
@@ -55,8 +55,8 @@ class ExShimmerWidget extends StatelessWidget {
       highlightColor: Color(0xFFE9E9E9),
       child: Row(children: [
         Container(
-          width: 50,
-          height: 50,
+          width: 75,
+          height: 75,
           color: Colors.black,
         ),
         SizedBox(width: 10),
@@ -67,13 +67,13 @@ class ExShimmerWidget extends StatelessWidget {
               Container(
                 color: Colors.black,
                 width: double.infinity,
-                height: 20,
+                height: 35,
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 5),
               Container(
                 color: Colors.black,
                 width: double.infinity,
-                height: 20,
+                height: 35,
               ),
             ],
           ),

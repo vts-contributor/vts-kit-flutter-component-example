@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:vts_component/vts_component.dart';
 import 'package:vts_flutter_demo_pendo/components/demo_appbar.dart';
+import 'package:vts_flutter_demo_pendo/components/demo_box.dart';
 
 class RatingBarPage extends StatefulWidget {
   @override
@@ -14,67 +15,98 @@ class _RatingBarPageState extends State<RatingBarPage> {
     return Scaffold(
       appBar: DemoAppbar(title: "VTS Rating Bar"),
       body: Column(
-        // EXAMPLE 1:
         children: [
-          SizedBox(height: 50),
-          Text("Custom rating", style: TextStyle(fontWeight: FontWeight.bold)),
-          SizedBox(height: 20),
-          VTSRatingBar.builder(
-            initialRating: 1,
-            itemCount: 3,
-            itemSize: (MediaQuery.of(context).size.width - 100) / 3,
-            itemBuilder: (context, index) {
-              switch (index) {
-                case 0:
-                  return _buildRatingWidget(
-                      "lib/assets/icons/sad.svg", "Không hài lòng", Colors.red);
-                case 1:
-                  return _buildRatingWidget("lib/assets/icons/smile.svg",
-                      "Bình thường", Colors.amber);
-                default:
-                  return _buildRatingWidget("lib/assets/icons/big_smile.svg",
-                      "Hài lòng", Color.fromARGB(255, 13, 129, 21));
-              }
-            },
-            onRatingUpdate: (rating) {},
-            isShowOnly1Rating: true,
-          ),
-          Divider(height: 50),
-
-          // EXAMPLE 2:
-          Text(
-            "Basic rating (allow half rating)",
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 20),
-          VTSRatingBar(
-            initialRating: 1.5,
-            itemCount: 5,
-            onRatingUpdate: (value) {},
-            ratingWidget: VTSRatingWidget(
-              full: Icon(Icons.star_rounded, color: Colors.amber),
-              empty: Icon(Icons.star_rounded, color: Colors.grey),
-              half: Icon(Icons.star_half_rounded, color: Colors.amber),
+          DemoBox(
+            title: "Custom rating (only 1 icon shines)",
+            child: VTSRatingBar.builder(
+              initialRating: 2,
+              itemCount: 3,
+              itemSize: (MediaQuery.of(context).size.width - 100) / 3,
+              itemBuilder: (context, index) {
+                switch (index) {
+                  case 0:
+                    return _buildRatingWidget(
+                        "lib/assets/icons/sad.svg", "Không hài lòng", Colors.red);
+                  case 1:
+                    return _buildRatingWidget("lib/assets/icons/smile.svg",
+                        "Bình thường", Colors.amber);
+                  default:
+                    return _buildRatingWidget("lib/assets/icons/big_smile.svg",
+                        "Hài lòng", Color.fromARGB(255, 13, 129, 21));
+                }
+              },
+              onRatingUpdate: (rating) {},
+              isShowOnly1Rating: true,
             ),
-            allowHalfRating: true,
           ),
-
-          // EXAMPLE 3:
-          Text(
-            "Basic rating (NO allow half rating)",
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 20),
-          VTSRatingBar(
-            initialRating: 1.5,
-            itemCount: 5,
-            onRatingUpdate: (value) {},
-            ratingWidget: VTSRatingWidget(
-              full: Icon(Icons.star_rounded, color: Colors.amber),
-              empty: Icon(Icons.star_rounded, color: Colors.grey),
-              half: Icon(Icons.star_half_rounded, color: Colors.amber),
+          //
+          DemoBox(
+            title: "Custom rating (icons from left to current shine)",
+            child: VTSRatingBar.builder(
+              initialRating: 2,
+              itemCount: 3,
+              itemSize: (MediaQuery.of(context).size.width - 100) / 3,
+              itemBuilder: (context, index) {
+                switch (index) {
+                  case 0:
+                    return _buildRatingWidget(
+                        "lib/assets/icons/sad.svg", "Không hài lòng", Colors.red);
+                  case 1:
+                    return _buildRatingWidget("lib/assets/icons/smile.svg",
+                        "Bình thường", Colors.amber);
+                  default:
+                    return _buildRatingWidget("lib/assets/icons/big_smile.svg",
+                        "Hài lòng", Color.fromARGB(255, 13, 129, 21));
+                }
+              },
+              onRatingUpdate: (rating) {},
             ),
-            allowHalfRating: false,
+          ),
+          //
+          DemoBox(
+            title: "Basic rating (allow half rating)",
+            child: VTSRatingBar(
+              initialRating: 1.5,
+              itemCount: 5,
+              onRatingUpdate: (value) {},
+              ratingWidget: VTSRatingWidget(
+                full: Icon(Icons.star_rounded, color: Colors.amber),
+                empty: Icon(Icons.star_rounded, color: Colors.grey),
+                half: Icon(Icons.star_half_rounded, color: Colors.amber),
+              ),
+              allowHalfRating: true,
+            ),
+          ),
+          //
+          DemoBox(
+            title: "Basic rating (NO allow half rating)",
+            child: VTSRatingBar(
+              initialRating: 1.5,
+              itemCount: 5,
+              onRatingUpdate: (value) {},
+              ratingWidget: VTSRatingWidget(
+                full: Icon(Icons.star_rounded, color: Colors.amber),
+                empty: Icon(Icons.star_rounded, color: Colors.grey),
+                half: Icon(Icons.star_half_rounded, color: Colors.amber),
+              ),
+              allowHalfRating: false,
+            ),
+          ),
+          //
+          DemoBox(
+            title: "Basic rating (read only)",
+            child: VTSRatingBar(
+              initialRating: 1.5,
+              itemCount: 5,
+              onRatingUpdate: (value) {},
+              ratingWidget: VTSRatingWidget(
+                full: Icon(Icons.star_rounded, color: Colors.amber),
+                empty: Icon(Icons.star_rounded, color: Colors.grey),
+                half: Icon(Icons.star_half_rounded, color: Colors.amber),
+              ),
+              allowHalfRating: false,
+              disabled: true,
+            ),
           ),
         ],
       ),
