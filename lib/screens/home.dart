@@ -9,6 +9,7 @@ import 'package:vts_component/common/style/vts_common.dart';
 import 'package:vts_component/vts_component.dart';
 import 'package:vts_flutter_demo_pendo/components/demo_appbar.dart';
 import 'package:vts_flutter_demo_pendo/screens/dropdowns/dropdown_types.dart';
+import 'package:vts_flutter_demo_pendo/screens/textfield/textfield.dart';
 import '../screens/accordian/accordian.dart';
 import '../screens/avatar/avatars.dart';
 import '../screens/badges/badges.dart';
@@ -144,6 +145,14 @@ class _HomePageState extends State<HomePage> {
       ),
       'title': 'Search Bar',
       'route': SearchbarPage()
+    },
+    {
+      'icon': const IconData(
+        0xe919,
+        fontFamily: 'GFFontIcons',
+      ),
+      'title': 'Textfield',
+      'route': TextFieldPage(),
     },
     // {
     //   'icon': const IconData(

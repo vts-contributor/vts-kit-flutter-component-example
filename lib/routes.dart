@@ -23,6 +23,7 @@ import 'package:vts_flutter_demo_pendo/screens/tabs/icon_tabs.dart';
 import 'package:vts_flutter_demo_pendo/screens/tabs/labeled_tabs.dart';
 import 'package:vts_flutter_demo_pendo/screens/tabs/segment_tabs.dart';
 import 'package:vts_flutter_demo_pendo/screens/tabs/tab_types.dart';
+import 'package:vts_flutter_demo_pendo/screens/textfield/textfield.dart';
 import 'package:vts_flutter_demo_pendo/screens/tiles/tiles_page.dart';
 import 'package:vts_flutter_demo_pendo/screens/toast/toasts.dart';
 import 'package:vts_flutter_demo_pendo/screens/toggle/toggles.dart';
@@ -68,6 +69,7 @@ class AppRoute{
     '/single_select': (_) => DropDownSingleSelect(),
     '/multi_select': (_) => DropDownMultipleSelect(),
 
+    '/text_field': (_) => TextFieldPage(),
     '/search_bar': (_) => SearchbarPage()
   };
 }

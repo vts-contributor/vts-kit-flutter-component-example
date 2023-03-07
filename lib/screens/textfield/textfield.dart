@@ -10,12 +10,17 @@ class TextFieldPage extends StatefulWidget {
 }
 
 class _TextFieldPageState extends State<TextFieldPage> {
-  String inputText = "VTS TextField";
-  TextEditingController controller = TextEditingController();
-  GlobalKey<FormState>? viewKeyEn = GlobalKey<FormState>();
-  GlobalKey<FormState>? viewKeyDis = GlobalKey<FormState>();
+  TextEditingController controllerEn = TextEditingController();
+  TextEditingController controllerDis = TextEditingController();
+  GlobalKey<FormState>? viewKeyEnFirst = GlobalKey<FormState>();
+  GlobalKey<FormState>? viewKeyEnSecond = GlobalKey<FormState>();
+  GlobalKey<FormState>? viewKeyEnThird = GlobalKey<FormState>();
+  GlobalKey<FormState>? viewKeyDisFirst = GlobalKey<FormState>();
+  GlobalKey<FormState>? viewKeyDisSecond = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
+    controllerEn.text = 'Thiết kế';
+    controllerDis.text = 'Thiết kế giao diện';
     return Scaffold(
       appBar: DemoAppbar(title: 'TextField'),
       body: Container(
@@ -23,32 +28,64 @@ class _TextFieldPageState extends State<TextFieldPage> {
         width: MediaQuery.of(context).size.width,
         child: Column(
           children: [
-            VTSTextField(
-              keyVTS: viewKeyEn,
-              controller: controller,
-              enabled: true,
-            ),
-            ElevatedButton(
-              onPressed: () {
-                if (viewKeyEn != null && viewKeyEn!.currentState!.validate()) {
-                  setState(() {
-                    inputText = controller.text;
-                  });
-                }
-              },
-              child: const Text('Submit'),
-            ),
-            Text(inputText),
-            const SizedBox(
-              height: 4.0,
-            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 36.0, vertical: 16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 1.0),
+                    child: Text('DEFAULT', style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w600
+                    ),),
+                  ),
+                  SizedBox(height: 17.0),
+                  VTSTextField(
+                    keyVTS: viewKeyEnFirst,
+                  ),
+                  SizedBox(height: 24.0),
+                  VTSTextField(
+                    keyVTS: viewKeyEnSecond,
+                    controller: controllerEn,
+                  ),
+                  SizedBox(height: 24.0),
+                  VTSTextField(
+                    keyVTS: viewKeyEnThird,
+                    autovalidateMode: AutovalidateMode.always,
+                  ),
 
-            VTSTextField(
-              enabled: false,
-              keyVTS: viewKeyDis,
+                  // MyCustomForm(),
+                ],
+              ),
             ),
-
-            // MyCustomForm(),
+            Divider(),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 36.0, vertical: 16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 1.0),
+                    child: Text('DISABLE', style: TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.w600
+                    ),),
+                  ),
+                  SizedBox(height: 17.0),
+                  VTSTextField(
+                    enabled: false,
+                    keyVTS: viewKeyDisFirst,
+                    controller: controllerDis,
+                  ),
+                  SizedBox(height: 24.0),
+                  VTSTextField(
+                    enabled: false,
+                    keyVTS: viewKeyDisSecond,
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
