@@ -8,6 +8,7 @@ import 'package:pendo_sdk/pendo_sdk.dart';
 import 'package:vts_component/common/style/vts_common.dart';
 import 'package:vts_component/vts_component.dart';
 import 'package:vts_flutter_demo_pendo/components/demo_appbar.dart';
+import 'package:vts_flutter_demo_pendo/screens/alert/alert.dart';
 import 'package:vts_flutter_demo_pendo/screens/dropdowns/dropdown_types.dart';
 import '../screens/accordian/accordian.dart';
 import '../screens/avatar/avatars.dart';
@@ -153,14 +154,14 @@ class _HomePageState extends State<HomePage> {
     //   'title': 'Appbar',
     //   'route': AppHome()
     // },
-    // {
-    //   'icon': const IconData(
-    //     0xe901,
-    //     fontFamily: 'GFFontIcons',
-    //   ),
-    //   'title': 'Alert',
-    //   'route': AlertPage()
-    // },
+    {
+      'icon': const IconData(
+        0xe901,
+        fontFamily: 'GFFontIcons',
+      ),
+      'title': 'Alert',
+      'route': AlertPage()
+    },
     // {
     //   'icon': const IconData(
     //     0xe901,
@@ -281,7 +282,6 @@ class _HomePageState extends State<HomePage> {
     //   'title': 'StickyHeader',
     //   'route': StickyTypes()
     // },
-
   ];
 
   @override
@@ -338,10 +338,10 @@ class _HomePageState extends State<HomePage> {
         },
         child: Container(
           decoration: BoxDecoration(
-            color: VTSColors.WHITE_1,
-            borderRadius: BorderRadius.circular(12.0),
-            border: Border.all(width: 1, color: VTSCommon.BORDER_COLOR_LIGHT)
-          ),
+              color: VTSColors.WHITE_1,
+              borderRadius: BorderRadius.circular(12.0),
+              border:
+                  Border.all(width: 1, color: VTSCommon.BORDER_COLOR_LIGHT)),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
