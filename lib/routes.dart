@@ -11,6 +11,7 @@ import 'package:vts_flutter_demo_pendo/screens/button/standard_buttons.dart';
 import 'package:vts_flutter_demo_pendo/screens/button/text_buttons.dart';
 import 'package:vts_flutter_demo_pendo/screens/cards/cards.dart';
 import 'package:vts_flutter_demo_pendo/screens/carousel/carousel.dart';
+import 'package:vts_flutter_demo_pendo/screens/date_picker/date_picker.dart';
 import 'package:vts_flutter_demo_pendo/screens/dropdowns/dropdown_multiple_select.dart';
 import 'package:vts_flutter_demo_pendo/screens/dropdowns/dropdown_single_select.dart';
 import 'package:vts_flutter_demo_pendo/screens/dropdowns/dropdown_types.dart';
@@ -27,8 +28,7 @@ import 'package:vts_flutter_demo_pendo/screens/tiles/tiles_page.dart';
 import 'package:vts_flutter_demo_pendo/screens/toast/toasts.dart';
 import 'package:vts_flutter_demo_pendo/screens/toggle/toggles.dart';
 
-class AppRoute{
-
+class AppRoute {
   static dynamic Pages = {
     '/': (_) => HomePage(),
     
@@ -68,6 +68,8 @@ class AppRoute{
     '/single_select': (_) => DropDownSingleSelect(),
     '/multi_select': (_) => DropDownMultipleSelect(),
 
-    '/search_bar': (_) => SearchbarPage()
+    '/search_bar': (_) => SearchbarPage(),
+
+    '/date_picker': (_) => DatePickerPage(),
   };
 }

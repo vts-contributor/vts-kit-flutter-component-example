@@ -8,6 +8,7 @@ import 'package:pendo_sdk/pendo_sdk.dart';
 import 'package:vts_component/common/style/vts_common.dart';
 import 'package:vts_component/vts_component.dart';
 import 'package:vts_flutter_demo_pendo/components/demo_appbar.dart';
+import 'package:vts_flutter_demo_pendo/screens/date_picker/date_picker.dart';
 import 'package:vts_flutter_demo_pendo/screens/dropdowns/dropdown_types.dart';
 import '../screens/accordian/accordian.dart';
 import '../screens/avatar/avatars.dart';
@@ -145,6 +146,14 @@ class _HomePageState extends State<HomePage> {
       'title': 'Search Bar',
       'route': SearchbarPage()
     },
+    {
+      'icon': const IconData(
+        0xf06c8,
+        fontFamily: 'MaterialIcons',
+      ),
+      'title': 'Date Picker',
+      'route': DatePickerPage()
+    },
     // {
     //   'icon': const IconData(
     //     0xe91e,
@@ -281,7 +290,6 @@ class _HomePageState extends State<HomePage> {
     //   'title': 'StickyHeader',
     //   'route': StickyTypes()
     // },
-
   ];
 
   @override
@@ -340,7 +348,7 @@ class _HomePageState extends State<HomePage> {
           decoration: BoxDecoration(
             color: VTSColors.WHITE_1,
             borderRadius: BorderRadius.circular(12.0),
-            border: Border.all(width: 1, color: VTSCommon.BORDER_COLOR_LIGHT)
+            border: Border.all(width: 1, color: VTSCommon.BORDER_COLOR_LIGHT),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
