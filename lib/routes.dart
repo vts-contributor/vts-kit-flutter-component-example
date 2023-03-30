@@ -30,6 +30,7 @@ import 'package:vts_flutter_demo_pendo/screens/textfield/textfield.dart';
 import 'package:vts_flutter_demo_pendo/screens/tiles/tiles_page.dart';
 import 'package:vts_flutter_demo_pendo/screens/toast/toasts.dart';
 import 'package:vts_flutter_demo_pendo/screens/toggle/toggles.dart';
+import 'package:vts_flutter_demo_pendo/screens/alert/alert.dart';
 
 class AppRoute{
 
@@ -77,6 +78,7 @@ class AppRoute{
     '/progress': (_) => ProgressBarPage(),
 
     '/text_field': (_) => TextFieldPage(),
-    '/search_bar': (_) => SearchbarPage()
+    '/search_bar': (_) => SearchbarPage(),
+    '/alert': (_) => AlertPage()
   };
 }
