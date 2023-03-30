@@ -1,4 +1,4 @@
-name: vts_flutter_demo_pendo
+name: vts_kit_flutter_component_example
 description: Flutter Component Demo App
 
 version: 1.0.8+9
@@ -13,12 +13,11 @@ dependencies:
     sdk: flutter
   flutter_svg: any
   vts_component:
-    path: '../vts-kit-flutter-component/'
+    path: '../vts_component-git/'
 
   flutter_webview_plugin: ^0.4.0
   cupertino_icons: ^1.0.3
   font_awesome_flutter: ^9.1.0
-  pendo_sdk: ^2.18.0
   device_info_plus: ^4.1.2
   android_id: ^0.0.7
 

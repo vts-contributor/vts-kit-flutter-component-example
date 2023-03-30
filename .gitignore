@@ -46,3 +46,4 @@ lib/generated_plugin_registrant.dart
 .fvm
 .dart_tool
 pubspec.lock
+Podfile.lock

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:pendo_sdk/pendo_sdk.dart';
 import 'package:vts_component/vts_component.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:vts_flutter_demo_pendo/components/demo_appbar.dart';
+import 'package:vts_kit_flutter_component_example/components/demo_appbar.dart';
 
 class CardPage extends StatefulWidget {
   @override
@@ -22,12 +21,6 @@ class _CardPageState extends State<CardPage>
   void initState() {
     super.initState();
     tabController = TabController(length: 3, vsync: this);
-    addTrackEvent();
-  }
-
-  Future<void> addTrackEvent() async {
-    PendoFlutterPlugin.track("Test card", {});
-    if (!mounted) return;
   }
 
   @override

@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:vts_component/vts_component.dart';
-import 'package:vts_flutter_demo_pendo/components/demo_appbar.dart';
-import 'package:vts_flutter_demo_pendo/components/demo_box.dart';
-import 'package:vts_flutter_demo_pendo/components/demo_subtitle.dart';
+import 'package:vts_kit_flutter_component_example/components/demo_appbar.dart';
+import 'package:vts_kit_flutter_component_example/components/demo_box.dart';
+import 'package:vts_kit_flutter_component_example/components/demo_subtitle.dart';
 
 class IconButtons extends StatefulWidget {
   @override

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:pendo_sdk/pendo_sdk.dart';
-import 'package:vts_flutter_demo_pendo/components/demo_appbar.dart';
-import 'package:vts_flutter_demo_pendo/components/demo_list_tile.dart';
+import 'package:vts_kit_flutter_component_example/components/demo_appbar.dart';
+import 'package:vts_kit_flutter_component_example/components/demo_list_tile.dart';
 import 'icon_buttons.dart';
 import 'pill_buttons.dart';
 import 'social_buttons.dart';
@@ -19,15 +18,8 @@ class _ButtonTypesState extends State<ButtonTypes> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    addTrackEvent();
     print("Add Track");
   }
-
-  Future<void> addTrackEvent() async {
-    PendoFlutterPlugin.track("Test button", {});
-    if (!mounted) return;
-  }
-
 
   @override
   Widget build(BuildContext context) => Scaffold(

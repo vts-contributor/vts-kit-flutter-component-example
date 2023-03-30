@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:pendo_sdk/pendo_sdk.dart';
-import 'package:vts_flutter_demo_pendo/components/demo_appbar.dart';
-import 'package:vts_flutter_demo_pendo/components/demo_list_tile.dart';
+import 'package:vts_kit_flutter_component_example/components/demo_appbar.dart';
+import 'package:vts_kit_flutter_component_example/components/demo_list_tile.dart';
 import 'bottom_label_tab.dart';
 import 'bottom_icon_tab.dart';
 import 'icon_tabs.dart';
@@ -17,15 +16,7 @@ class TabTypes extends StatefulWidget {
 class _TabTypesState extends State<TabTypes> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    addTrackEvent();
-    print("Add Track");
-  }
-
-  Future<void> addTrackEvent() async {
-    PendoFlutterPlugin.track("Test tab", {});
-    if (!mounted) return;
   }
 
   @override

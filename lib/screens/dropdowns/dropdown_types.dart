@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:vts_flutter_demo_pendo/components/demo_appbar.dart';
-import 'package:vts_flutter_demo_pendo/components/demo_list_tile.dart';
-import 'package:vts_flutter_demo_pendo/screens/dropdowns/dropdown_multiple_select.dart';
-import 'package:vts_flutter_demo_pendo/screens/dropdowns/dropdown_single_select.dart';
+import 'package:vts_kit_flutter_component_example/components/demo_appbar.dart';
+import 'package:vts_kit_flutter_component_example/components/demo_list_tile.dart';
+import 'package:vts_kit_flutter_component_example/screens/dropdowns/dropdown_multiple_select.dart';
+import 'package:vts_kit_flutter_component_example/screens/dropdowns/dropdown_single_select.dart';
 
 class DropdownTypes extends StatefulWidget {
   @override

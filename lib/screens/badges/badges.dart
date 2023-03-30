@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:pendo_sdk/pendo_sdk.dart';
 import 'package:vts_component/common/style/vts_color.dart';
 import 'package:vts_component/vts_component.dart';
-import 'package:vts_flutter_demo_pendo/components/demo_appbar.dart';
-import 'package:vts_flutter_demo_pendo/components/demo_box.dart';
+import 'package:vts_kit_flutter_component_example/components/demo_appbar.dart';
+import 'package:vts_kit_flutter_component_example/components/demo_box.dart';
 
 class BadgesPage extends StatefulWidget {
   @override
@@ -16,13 +15,6 @@ class _BadgesPageState extends State<BadgesPage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    addTrackEvent();
-    print("Add Track");
-  }
-
-  Future<void> addTrackEvent() async {
-    PendoFlutterPlugin.track("Test badge", {});
-    if (!mounted) return;
   }
 
   @override
