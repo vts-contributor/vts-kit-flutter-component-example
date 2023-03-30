@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:vts_component/vts_component.dart';
 import 'package:vts_flutter_demo_pendo/components/demo_appbar.dart';
 import 'package:vts_flutter_demo_pendo/screens/alert/alert.dart';
+import 'package:vts_flutter_demo_pendo/screens/date_picker/date_picker.dart';
 import 'package:vts_flutter_demo_pendo/screens/dropdowns/dropdown_types.dart';
 import 'package:vts_flutter_demo_pendo/screens/progress_bar/progress_bar.dart';
 import 'package:vts_flutter_demo_pendo/screens/rating_bar/rating_bar.dart';
@@ -164,7 +165,15 @@ class _HomePageState extends State<HomePage> {
         fontFamily: 'GFFontIcons',
       ),
       'title': 'Textfield',
-      'route': TextFieldPage(),
+      'route': TextFieldPage()
+    },
+    {
+      'icon': const IconData(
+        0xf06c8,
+        fontFamily: 'MaterialIcons',
+      ),
+      'title': 'Date Picker',
+      'route': DatePickerPage()
     },
     // {
     //   'icon': const IconData(
@@ -358,10 +367,10 @@ class _HomePageState extends State<HomePage> {
         },
         child: Container(
           decoration: BoxDecoration(
-              color: VTSColors.WHITE_1,
-              borderRadius: BorderRadius.circular(12.0),
-              border:
-                  Border.all(width: 1, color: VTSCommon.BORDER_COLOR_LIGHT)),
+            color: VTSColors.WHITE_1,
+            borderRadius: BorderRadius.circular(12.0),
+            border: Border.all(width: 1, color: VTSCommon.BORDER_COLOR_LIGHT),
+          ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
