@@ -5,6 +5,7 @@ import 'package:vts_flutter_demo_pendo/screens/dropdowns/dropdown_types.dart';
 import 'package:vts_flutter_demo_pendo/screens/progress_bar/progress_bar.dart';
 import 'package:vts_flutter_demo_pendo/screens/rating_bar/rating_bar.dart';
 import 'package:vts_flutter_demo_pendo/screens/shimmer/shimmer.dart';
+import 'package:vts_flutter_demo_pendo/screens/textfield/textfield.dart';
 import '../screens/accordian/accordian.dart';
 import '../screens/avatar/avatars.dart';
 import '../screens/badges/badges.dart';
@@ -155,6 +156,14 @@ class _HomePageState extends State<HomePage> {
       'icon': Icons.blur_linear_rounded,
       'title': 'Shimmer',
       'route': ShimmerPage()
+    },
+    {
+      'icon': const IconData(
+        0xe919,
+        fontFamily: 'GFFontIcons',
+      ),
+      'title': 'Textfield',
+      'route': TextFieldPage(),
     },
     // {
     //   'icon': const IconData(
