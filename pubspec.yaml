@@ -13,7 +13,7 @@ dependencies:
     sdk: flutter
   flutter_svg: any
   vts_component:
-    path: '../vts_component-git/'
+    path: /Users/trungvan/Dev/Viettel/vts-kit/vts-kit-flutter-component
 
   flutter_webview_plugin: ^0.4.0
   cupertino_icons: ^1.0.3
