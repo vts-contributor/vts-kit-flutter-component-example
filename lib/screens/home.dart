@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:vts_component/vts_component.dart';
 import 'package:vts_kit_flutter_component_example/components/demo_appbar.dart';
 import 'package:vts_kit_flutter_component_example/screens/alert/alert.dart';
-import 'package:vts_kit_flutter_component_example/screens/date_picker/date_picker.dart';
+import 'package:vts_kit_flutter_component_example/screens/date_time_picker/date_time_picker.dart';
 import 'package:vts_kit_flutter_component_example/screens/dropdowns/dropdown_types.dart';
 import 'package:vts_kit_flutter_component_example/screens/progress_bar/progress_bar.dart';
 import 'package:vts_kit_flutter_component_example/screens/rating_bar/rating_bar.dart';
@@ -172,8 +172,8 @@ class _HomePageState extends State<HomePage> {
         0xf06c8,
         fontFamily: 'MaterialIcons',
       ),
-      'title': 'Date Picker',
-      'route': DatePickerPage()
+      'title': 'DateTime Picker',
+      'route': DateTimePickerPage()
     },
     // {
     //   'icon': const IconData(

@@ -11,7 +11,7 @@ import 'package:vts_kit_flutter_component_example/screens/button/standard_button
 import 'package:vts_kit_flutter_component_example/screens/button/text_buttons.dart';
 import 'package:vts_kit_flutter_component_example/screens/cards/cards.dart';
 import 'package:vts_kit_flutter_component_example/screens/carousel/carousel.dart';
-import 'package:vts_kit_flutter_component_example/screens/date_picker/date_picker.dart';
+import 'package:vts_kit_flutter_component_example/screens/date_time_picker/date_time_picker.dart';
 import 'package:vts_kit_flutter_component_example/screens/dropdowns/dropdown_multiple_select.dart';
 import 'package:vts_kit_flutter_component_example/screens/dropdowns/dropdown_single_select.dart';
 import 'package:vts_kit_flutter_component_example/screens/dropdowns/dropdown_types.dart';
@@ -36,51 +36,36 @@ import 'package:vts_kit_flutter_component_example/screens/alert/alert.dart';
 class AppRoute {
   static dynamic Pages = {
     '/': (_) => HomePage(),
-    
     '/button_types': (_) => ButtonTypes(),
     '/standard_button': (_) => StandardButtons(),
     '/pill_button': (_) => PillsButtons(),
     '/icon_button': (_) => IconButtons(),
     '/text_button': (_) => TextButtons(),
     '/social_button': (_) => SocialButtons(),
-
     '/tab_types': (_) => TabTypes(),
     '/segment_tab': (_) => SegmentTabsPage(),
     '/icon_tab': (_) => IconTabs(),
     '/labaled_tab': (_) => LabeledTabs(),
     '/bottom_icon_tab': (_) => BottomIconTab(),
     '/bottom_labeled_icon_tab': (_) => BottomLabelTab(),
-
     '/badge': (_) => BadgesPage(),
-
     '/card': (_) => CardPage(),
-
     '/carousel': (_) => CarouselPage(),
-
     '/avatar': (_) => AvatarPage(),
-
     '/image': (_) => ImagesPage(),
-
     '/tile': (_) => TilesPage(),
-
     '/toggle': (_) => TogglesPage(),
-
     '/toast': (_) => ToastsPage(),
-
     '/accordion': (_) => AccordionPage(),
-
     '/dropdown_type': (_) => DropdownTypes(),
     '/single_select': (_) => DropDownSingleSelect(),
     '/multi_select': (_) => DropDownMultipleSelect(),
-
     '/shimmer': (_) => ShimmerPage(),
     '/rating': (_) => RatingBarPage(),
     '/progress': (_) => ProgressBarPage(),
-
     '/text_field': (_) => TextFieldPage(),
     '/search_bar': (_) => SearchbarPage(),
-
-    '/date_picker': (_) => DatePickerPage(),
+    '/date_time_picker': (_) => DateTimePickerPage(),
     '/alert': (_) => AlertPage()
   };
 }
