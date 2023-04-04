@@ -12,12 +12,14 @@ import 'package:vts_kit_flutter_component_example/screens/button/text_buttons.da
 import 'package:vts_kit_flutter_component_example/screens/cards/cards.dart';
 import 'package:vts_kit_flutter_component_example/screens/carousel/carousel.dart';
 import 'package:vts_kit_flutter_component_example/screens/date_time_picker/date_time_picker.dart';
+import 'package:vts_kit_flutter_component_example/screens/checkbox/checkbox.dart';
 import 'package:vts_kit_flutter_component_example/screens/dropdowns/dropdown_multiple_select.dart';
 import 'package:vts_kit_flutter_component_example/screens/dropdowns/dropdown_single_select.dart';
 import 'package:vts_kit_flutter_component_example/screens/dropdowns/dropdown_types.dart';
 import 'package:vts_kit_flutter_component_example/screens/home.dart';
 import 'package:vts_kit_flutter_component_example/screens/images/images.dart';
 import 'package:vts_kit_flutter_component_example/screens/progress_bar/progress_bar.dart';
+import 'package:vts_kit_flutter_component_example/screens/radiobutton/radiobutton.dart';
 import 'package:vts_kit_flutter_component_example/screens/rating_bar/rating_bar.dart';
 import 'package:vts_kit_flutter_component_example/screens/searchbar/seachbar.dart';
 import 'package:vts_kit_flutter_component_example/screens/shimmer/shimmer.dart';
@@ -66,6 +68,8 @@ class AppRoute {
     '/text_field': (_) => TextFieldPage(),
     '/search_bar': (_) => SearchbarPage(),
     '/date_time_picker': (_) => DateTimePickerPage(),
-    '/alert': (_) => AlertPage()
+    '/alert': (_) => AlertPage(),
+    '/checkbox': (_) => CheckBoxPage(),
+    '/radiobutton': (_) => RadioButtonPage()
   };
 }
