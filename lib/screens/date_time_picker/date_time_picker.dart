@@ -16,7 +16,7 @@ class _DateTimePickerPageState extends State<DateTimePickerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: DemoAppbar(title: 'DateTime picker'),
+      appBar: DemoAppbar(title: 'DateTime Picker'),
       body: DemoBox(
         child: VTSButton(
           text: 'Show picker',

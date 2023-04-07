@@ -11,6 +11,7 @@ import 'package:vts_kit_flutter_component_example/screens/button/standard_button
 import 'package:vts_kit_flutter_component_example/screens/button/text_buttons.dart';
 import 'package:vts_kit_flutter_component_example/screens/cards/cards.dart';
 import 'package:vts_kit_flutter_component_example/screens/carousel/carousel.dart';
+import 'package:vts_kit_flutter_component_example/screens/charts/pie_chart/pie_chart.dart';
 import 'package:vts_kit_flutter_component_example/screens/date_time_picker/date_time_picker.dart';
 import 'package:vts_kit_flutter_component_example/screens/dropdowns/dropdown_multiple_select.dart';
 import 'package:vts_kit_flutter_component_example/screens/dropdowns/dropdown_single_select.dart';
@@ -66,6 +67,7 @@ class AppRoute {
     '/text_field': (_) => TextFieldPage(),
     '/search_bar': (_) => SearchbarPage(),
     '/date_time_picker': (_) => DateTimePickerPage(),
+    '/pie_chart': (_) => PieChartPage(),
     '/alert': (_) => AlertPage()
   };
 }
