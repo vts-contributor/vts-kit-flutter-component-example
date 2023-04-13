@@ -22,6 +22,7 @@ import '../screens/tiles/tiles_page.dart';
 import '../screens/toast/toasts.dart';
 import '../screens/toggle/toggles.dart';
 import 'checkbox/checkbox.dart';
+import 'line_chart_style_1/line_chart_style_1.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -264,6 +265,15 @@ class _HomePageState extends State<HomePage> {
       ),
       'title': 'RadioButton',
       'route': RadioButtonPage()
+    },
+    {
+      'icon':IconData(
+        0xe412,
+        fontFamily: 'MaterialIcons',
+      ),
+      'title': 'LineChartStyle1',
+      'route': LineChartStyle1()
+
     },
     // {
     //   'icon': const IconData(
