@@ -2,11 +2,12 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:vts_component/common/style/vts_color.dart';
-import 'package:vts_component/components/line_chart/axis/axis_chart_widgets.dart';
-import 'package:vts_component/components/line_chart/axis/axit_chart_data.dart';
-import 'package:vts_component/components/line_chart/base_chart/base_chart_data.dart';
-import 'package:vts_component/components/line_chart/line_chart/vts_line_chart.dart';
-import 'package:vts_component/components/line_chart/line_chart/vts_line_chart_data.dart';
+import 'package:vts_component/components/line_chart_and_area_chart/area_chart/vts_area_chart.dart';
+import 'package:vts_component/components/line_chart_and_area_chart/axis/axis_chart_widgets.dart';
+import 'package:vts_component/components/line_chart_and_area_chart/axis/axit_chart_data.dart';
+import 'package:vts_component/components/line_chart_and_area_chart/base_chart/base_chart_data.dart';
+import 'package:vts_component/components/line_chart_and_area_chart/line_chart/vts_line_chart.dart';
+import 'package:vts_component/components/line_chart_and_area_chart/line_chart/vts_line_chart_data.dart';
 import 'package:vts_kit_flutter_component_example/components/demo_box.dart';
 
 import '../../components/demo_appbar.dart';
@@ -38,13 +39,13 @@ class _LineChartStyle2State extends State<LineChartStyle2>{
                   children: [
                     Row(
                       children: [
-                        Icon(Icons.circle,color: Colors.red,),
+                        Icon(Icons.circle,color: Colors.grey,),
                         Text("Cate1")
                       ],
                     ),
                     Row(
                       children: [
-                        Icon(Icons.circle,color: Colors.green,),
+                        Icon(Icons.circle,color: Colors.purple,),
                         Text("Cate2")
                       ],
                     ),
@@ -56,13 +57,13 @@ class _LineChartStyle2State extends State<LineChartStyle2>{
                     ),
                     Row(
                       children: [
-                        Icon(Icons.circle,color: Colors.yellow,),
+                        Icon(Icons.circle,color: Colors.green,),
                         Text("Cate4")
                       ],
                     ),
                     Row(
                       children: [
-                        Icon(Icons.circle,color: Colors.purple,),
+                        Icon(Icons.circle,color: Colors.yellow,),
                         Text("Cate5")
                       ],
                     ),
@@ -149,7 +150,7 @@ class _LineChartStyle2State extends State<LineChartStyle2>{
         ),
         rightTitles: AxisTitles(
             sideTitles: SideTitles(
-                showTitles: false,
+              showTitles: false,
             )
         ),
         topTitles: AxisTitles(
@@ -196,17 +197,17 @@ class _LineChartStyle2State extends State<LineChartStyle2>{
     }
 
     final LineChartBarData lineChartBarData = LineChartBarData(
-      show : true,
-      spots: spots,
-      color: areaColor.withOpacity(0.8),
-      barWidth: 1,
-      dotData: VTSDotData(
-        show: false,
-      ),
-      createAreaData: BarAreaData(
-          show: true,
-          color: areaColor.withOpacity(0.8)
-      )
+        show : true,
+        spots: spots,
+        color: areaColor,
+        barWidth: 2,
+        dotData: VTSDotData(
+          show: false,
+        ),
+        createAreaChart: BarAreaData(
+            show: true,
+            color: areaColor.withOpacity(0.7)
+        )
     );
     return lineChartBarData;
   }
@@ -214,11 +215,11 @@ class _LineChartStyle2State extends State<LineChartStyle2>{
   List<LineChartBarData> linesBarData() {
     var rng = Random();
 
-    final LineChartBarData lineChartBarData5 = initBarData([rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble()],VTSColors.WHITE_1, Colors.red);
+    final LineChartBarData lineChartBarData5 = initBarData([rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble()],VTSColors.WHITE_1, Colors.grey);
     final LineChartBarData lineChartBarData4 = initBarData([rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble()],VTSColors.WHITE_1, Colors.purple);
-    final LineChartBarData lineChartBarData3 = initBarData([rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble()],VTSColors.WHITE_1, Colors.yellow);
+    final LineChartBarData lineChartBarData3 = initBarData([rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble()],VTSColors.WHITE_1, Colors.blue);
     final LineChartBarData lineChartBarData2 = initBarData([rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble()],VTSColors.WHITE_1, Colors.green);
-    final LineChartBarData lineChartBarData1 = initBarData([rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble()],VTSColors.WHITE_1, Colors.blue);
+    final LineChartBarData lineChartBarData1 = initBarData([rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble()],VTSColors.WHITE_1, Colors.yellow);
 
     return [
       lineChartBarData1,
