@@ -11,68 +11,25 @@ import 'package:vts_kit_flutter_component_example/components/demo_box.dart';
 
 import '../../components/demo_appbar.dart';
 
-class LineChartStyle1 extends StatefulWidget{
-  const LineChartStyle1({Key? key}) : super(key: key);
+class LineChartStyle2 extends StatefulWidget{
+  const LineChartStyle2({Key? key}) : super(key: key);
 
   @override
-  State<LineChartStyle1> createState()=> _LineChartStyle1State();
+  State<LineChartStyle2> createState()=> _LineChartStyle2State();
 
 }
-class OpenPainter1 extends CustomPainter {
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    var paint1 = Paint()
-      ..color = Colors.blue
-      ..style = PaintingStyle.fill;
-    canvas.drawCircle(Offset(150, 150), 10, paint1);
-  }
-
-  @override
-  bool shouldRepaint(CustomPainter oldDelegate) => true;
-}
-
-class OpenPainter2 extends CustomPainter {
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    var paint1 = Paint()
-      ..color = Colors.yellow
-      ..style = PaintingStyle.fill;
-    canvas.drawCircle(Offset(150, 150), 8, paint1);
-  }
-
-  @override
-  bool shouldRepaint(CustomPainter oldDelegate) => true;
-}
-
-class OpenPainter3 extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    var paint1 = Paint()
-      ..color = Colors.green
-      ..style = PaintingStyle.fill;
-    canvas.drawCircle(Offset(150, 150), 10, paint1);
-  }
-
-  @override
-  bool shouldRepaint(CustomPainter oldDelegate) => true;
-}
-class _LineChartStyle1State extends State<LineChartStyle1>{
-
+class _LineChartStyle2State extends State<LineChartStyle2>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: DemoAppbar(title: 'Chart'),
         body: DemoBox(
-            title: 'Line Chart Style 1',
+            title: 'Line Chart Style 2',
             child:Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-
               children: [
                 Container(
                   height: 300,
-                  // padding: const EdgeInsets.only(top:  10, right: 10),
                   child: VTSLineChart(_lineCharData()),//
                 ),
                 SizedBox(height: 20,),
@@ -154,21 +111,21 @@ class _LineChartStyle1State extends State<LineChartStyle1>{
   VTSLineChartData _lineCharData() {
     return VTSLineChartData(
       lineTouchData: LineTouchData(
-        enabled: true,
-        touchTooltipData: LineTouchTooltipData(
-          tooltipBgColor: VTSColors.FUNC_ORANGE_3,
-          getTooltipItems: customTooltipIcon,
-          fitInsideVertically: true,
-          fitInsideHorizontally: true,
-          tooltipRoundedRadius: 10,
-          tooltipPadding: const EdgeInsets.all(20),
-          tooltipMargin: 20,
-          tooltipHorizontalAlignment: VTSHorizontalAlignment.center,
-          rotateAngle: 0,
-          tooltipBorder: const BorderSide(
-              color: Colors.red
-          ),
-        ),
+        enabled: false,
+        // touchTooltipData: LineTouchTooltipData(
+        //   tooltipBgColor: VTSColors.FUNC_ORANGE_3,
+        //   getTooltipItems: customTooltipIcon,
+        //   fitInsideVertically: true,
+        //   fitInsideHorizontally: true,
+        //   tooltipRoundedRadius: 10,
+        //   tooltipPadding: const EdgeInsets.all(20),
+        //   tooltipMargin: 20,
+        //   tooltipHorizontalAlignment: VTSHorizontalAlignment.center,
+        //   rotateAngle: 0,
+        //   tooltipBorder: const BorderSide(
+        //       color: Colors.red
+        //   ),
+        // ),
         // touchCallback:  (TouchEvent event, LineTouchResponse? lineTouch){
         //   //to do
         // },
@@ -192,7 +149,7 @@ class _LineChartStyle1State extends State<LineChartStyle1>{
         ),
         rightTitles: AxisTitles(
             sideTitles: SideTitles(
-                showTitles: false
+                showTitles: false,
             )
         ),
         topTitles: AxisTitles(
@@ -232,7 +189,7 @@ class _LineChartStyle1State extends State<LineChartStyle1>{
     );
   }
 
-  LineChartBarData initBarData(List<double> data, Color color) {
+  LineChartBarData initBarData(List<double> data, Color color,Color areaColor) {
     List<VTSSpot> spots = [];
     for (int index = 0; index < data.length; index++) {
       spots.add(VTSSpot(1.0 * index, data[index]));
@@ -241,11 +198,15 @@ class _LineChartStyle1State extends State<LineChartStyle1>{
     final LineChartBarData lineChartBarData = LineChartBarData(
       show : true,
       spots: spots,
-      color: color,
-      barWidth: 2,
+      color: areaColor.withOpacity(0.8),
+      barWidth: 1,
       dotData: VTSDotData(
-        show: true,
+        show: false,
       ),
+      createAreaData: BarAreaData(
+          show: true,
+          color: areaColor.withOpacity(0.8)
+      )
     );
     return lineChartBarData;
   }
@@ -253,11 +214,11 @@ class _LineChartStyle1State extends State<LineChartStyle1>{
   List<LineChartBarData> linesBarData() {
     var rng = Random();
 
-    final LineChartBarData lineChartBarData5 = initBarData([rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble()], Colors.red);
-    final LineChartBarData lineChartBarData4 = initBarData([rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble()], Colors.purple);
-    final LineChartBarData lineChartBarData3 = initBarData([rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble()], Colors.yellow);
-    final LineChartBarData lineChartBarData2 = initBarData([rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble()], Colors.green);
-    final LineChartBarData lineChartBarData1 = initBarData([rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble()], Colors.blue);
+    final LineChartBarData lineChartBarData5 = initBarData([rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble()],VTSColors.WHITE_1, Colors.red);
+    final LineChartBarData lineChartBarData4 = initBarData([rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble()],VTSColors.WHITE_1, Colors.purple);
+    final LineChartBarData lineChartBarData3 = initBarData([rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble()],VTSColors.WHITE_1, Colors.yellow);
+    final LineChartBarData lineChartBarData2 = initBarData([rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble()],VTSColors.WHITE_1, Colors.green);
+    final LineChartBarData lineChartBarData1 = initBarData([rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble(),rng.nextInt(1000).toDouble()],VTSColors.WHITE_1, Colors.blue);
 
     return [
       lineChartBarData1,

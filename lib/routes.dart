@@ -19,7 +19,7 @@ import 'package:vts_kit_flutter_component_example/screens/dropdowns/dropdown_typ
 import 'package:vts_kit_flutter_component_example/screens/home.dart';
 import 'package:vts_kit_flutter_component_example/screens/images/images.dart';
 import 'package:vts_kit_flutter_component_example/screens/line_chart_style_1/line_chart_style_1.dart';
-import 'package:vts_kit_flutter_component_example/screens/line_chart_style_1/linechartstyle1.dart';
+import 'package:vts_kit_flutter_component_example/screens/line_chart_style_2/line_chart_style_2.dart';
 import 'package:vts_kit_flutter_component_example/screens/progress_bar/progress_bar.dart';
 import 'package:vts_kit_flutter_component_example/screens/radiobutton/radiobutton.dart';
 import 'package:vts_kit_flutter_component_example/screens/rating_bar/rating_bar.dart';
@@ -88,7 +88,8 @@ class AppRoute {
     '/alert': (_) => AlertPage(),
     '/checkbox': (_) => CheckBoxPage(),
     '/radiobutton': (_) => RadioButtonPage(),
-    '/linechartstyle1': (_) => LineChartStyle1()
+    '/linechartstyle1': (_) => LineChartStyle1(),
+    '/linechartstyle2': (_) => LineChartStyle2()
 
 
   };
