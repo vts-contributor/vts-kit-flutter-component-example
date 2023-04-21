@@ -24,6 +24,7 @@ import '../screens/toast/toasts.dart';
 import '../screens/toggle/toggles.dart';
 import 'checkbox/checkbox.dart';
 import 'line_chart_style_1/line_chart_style_1.dart';
+import 'line_chart_style_2/line_chart_style_2.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -274,6 +275,15 @@ class _HomePageState extends State<HomePage> {
       ),
       'title': 'LineChartStyle1',
       'route': LineChartStyle1()
+
+    },
+    {
+      'icon':IconData(
+        0xe412,
+        fontFamily: 'MaterialIcons',
+      ),
+      'title': 'LineChartStyle2',
+      'route': LineChartStyle2()
 
     },
     // {
