@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:vts_component/vts_component.dart';
 import 'package:vts_kit_flutter_component_example/components/demo_appbar.dart';
 import 'package:vts_kit_flutter_component_example/screens/alert/alert.dart';
-import 'package:vts_kit_flutter_component_example/screens/date_picker/date_picker.dart';
+import 'package:vts_kit_flutter_component_example/screens/charts/pie_chart/pie_chart.dart';
+import 'package:vts_kit_flutter_component_example/screens/date_time_picker/date_time_picker.dart';
 import 'package:vts_kit_flutter_component_example/screens/dropdowns/dropdown_types.dart';
 import 'package:vts_kit_flutter_component_example/screens/progress_bar/progress_bar.dart';
+import 'package:vts_kit_flutter_component_example/screens/radiobutton/radiobutton.dart';
 import 'package:vts_kit_flutter_component_example/screens/rating_bar/rating_bar.dart';
 import 'package:vts_kit_flutter_component_example/screens/shimmer/shimmer.dart';
 import 'package:vts_kit_flutter_component_example/screens/textfield/textfield.dart';
@@ -20,6 +22,9 @@ import '../screens/tabs/tab_types.dart';
 import '../screens/tiles/tiles_page.dart';
 import '../screens/toast/toasts.dart';
 import '../screens/toggle/toggles.dart';
+import 'checkbox/checkbox.dart';
+import 'line_chart_style_1/line_chart_style_1.dart';
+import 'line_chart_style_2/line_chart_style_2.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -172,17 +177,17 @@ class _HomePageState extends State<HomePage> {
         0xf06c8,
         fontFamily: 'MaterialIcons',
       ),
-      'title': 'Date Picker',
-      'route': DatePickerPage()
+      'title': 'DateTime Picker',
+      'route': DateTimePickerPage()
     },
-    // {
-    //   'icon': const IconData(
-    //     0xe91e,
-    //     fontFamily: 'GFFontIcons',
-    //   ),
-    //   'title': 'Appbar',
-    //   'route': AppHome()
-    // },
+    {
+      'icon': const IconData(
+        0xe4c5,
+        fontFamily: 'MaterialIcons',
+      ),
+      'title': 'Pie Chart',
+      'route': PieChartPage()
+    },
     {
       'icon': const IconData(
         0xe901,
@@ -239,14 +244,14 @@ class _HomePageState extends State<HomePage> {
     //   'title': 'Shimmer',
     //   'route': ShimmerPage()
     // },
-    // {
-    //   'icon': const IconData(
-    //     0xe906,
-    //     fontFamily: 'GFIconsnew',
-    //   ),
-    //   'title': 'CheckBox',
-    //   'route': CheckBoxPage()
-    // },
+    {
+      'icon': const IconData(
+        0xe906,
+        fontFamily: 'GFIconsnew',
+      ),
+      'title': 'CheckBox',
+      'route': CheckBoxPage()
+    },
     // {
     //   'icon': const IconData(
     //     0xe905,
@@ -255,14 +260,32 @@ class _HomePageState extends State<HomePage> {
     //   'title': 'CheckboxListTile',
     //   'route': CheckBoxListTilePage()
     // },
-    // {
-    //   'icon': const IconData(
-    //     0xe908,
-    //     fontFamily: 'GFIconsnew',
-    //   ),
-    //   'title': 'RadioButton',
-    //   'route': RadioButtonPage()
-    // },
+    {
+      'icon': const IconData(
+        0xe908,
+        fontFamily: 'GFIconsnew',
+      ),
+      'title': 'RadioButton',
+      'route': RadioButtonPage()
+    },
+    {
+      'icon':IconData(
+        0xe412,
+        fontFamily: 'MaterialIcons',
+      ),
+      'title': 'LineChartStyle1',
+      'route': LineChartStyle1()
+
+    },
+    {
+      'icon':IconData(
+        0xe412,
+        fontFamily: 'MaterialIcons',
+      ),
+      'title': 'LineChartStyle2',
+      'route': LineChartStyle2()
+
+    },
     // {
     //   'icon': const IconData(
     //     0xe909,
