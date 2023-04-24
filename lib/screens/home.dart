@@ -21,6 +21,8 @@ import '../screens/tabs/tab_types.dart';
 import '../screens/tiles/tiles_page.dart';
 import '../screens/toast/toasts.dart';
 import '../screens/toggle/toggles.dart';
+import 'bar_chart_style_1/bar_chart_style_1.dart';
+import 'bar_chart_style_2/bar_chart_style_2.dart';
 import 'checkbox/checkbox.dart';
 import 'line_chart_style_1/line_chart_style_1.dart';
 import 'line_chart_style_2/line_chart_style_2.dart';
@@ -283,7 +285,22 @@ class _HomePageState extends State<HomePage> {
       ),
       'title': 'LineChartStyle2',
       'route': LineChartStyle2()
-
+    },
+    {
+      'icon':IconData(
+          0xe0cc,
+          fontFamily: 'MaterialIcons'
+      ),
+      'title': 'BarChartStyle1',
+      'route': BarChartStyle1()
+    },
+    {
+      'icon': IconData(
+          0xf5a9,
+          fontFamily: 'MaterialIcons'
+      ),
+      'title': 'BarChartStyle2',
+      'route': BarChartStyle2()
     },
     // {
     //   'icon': const IconData(

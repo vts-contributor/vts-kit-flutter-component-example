@@ -2,11 +2,11 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:vts_component/common/style/vts_color.dart';
-import 'package:vts_component/components/line_chart_and_area_chart/axis/axis_chart_widgets.dart';
-import 'package:vts_component/components/line_chart_and_area_chart/axis/axit_chart_data.dart';
-import 'package:vts_component/components/line_chart_and_area_chart/base_chart/base_chart_data.dart';
-import 'package:vts_component/components/line_chart_and_area_chart/line_chart/vts_line_chart.dart';
-import 'package:vts_component/components/line_chart_and_area_chart/line_chart/vts_line_chart_data.dart';
+import 'package:vts_component/components/chart/axis/axis_chart_widgets.dart';
+import 'package:vts_component/components/chart/axis/axit_chart_data.dart';
+import 'package:vts_component/components/chart/base_chart/base_chart_data.dart';
+import 'package:vts_component/components/chart/line_chart/vts_line_chart.dart';
+import 'package:vts_component/components/chart/line_chart/vts_line_chart_data.dart';
 import 'package:vts_kit_flutter_component_example/components/demo_box.dart';
 
 import '../../components/demo_appbar.dart';
@@ -68,7 +68,6 @@ class _LineChartStyle1State extends State<LineChartStyle1>{
             title: 'Line Chart Style 1',
             child:Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-
               children: [
                 Container(
                   height: 300,

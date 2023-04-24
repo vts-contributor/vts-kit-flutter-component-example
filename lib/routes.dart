@@ -3,6 +3,8 @@
 import 'package:vts_kit_flutter_component_example/screens/accordian/accordian.dart';
 import 'package:vts_kit_flutter_component_example/screens/avatar/avatars.dart';
 import 'package:vts_kit_flutter_component_example/screens/badges/badges.dart';
+import 'package:vts_kit_flutter_component_example/screens/bar_chart_style_1/bar_chart_style_1.dart';
+import 'package:vts_kit_flutter_component_example/screens/bar_chart_style_2/bar_chart_style_2.dart';
 import 'package:vts_kit_flutter_component_example/screens/button/button_types.dart';
 import 'package:vts_kit_flutter_component_example/screens/button/icon_buttons.dart';
 import 'package:vts_kit_flutter_component_example/screens/button/pill_buttons.dart';
@@ -89,8 +91,9 @@ class AppRoute {
     '/checkbox': (_) => CheckBoxPage(),
     '/radiobutton': (_) => RadioButtonPage(),
     '/linechartstyle1': (_) => LineChartStyle1(),
-    '/linechartstyle2': (_) => LineChartStyle2()
-
+    '/linechartstyle2': (_) => LineChartStyle2(),
+    '/barchartstyle1': (_) => BarChartStyle1(),
+    '/barchartstyle2': (_) => BarChartStyle2()
 
   };
 }
