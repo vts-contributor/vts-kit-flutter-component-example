@@ -5,6 +5,7 @@ import 'package:vts_kit_flutter_component_example/screens/alert/alert.dart';
 import 'package:vts_kit_flutter_component_example/screens/date_picker/date_picker.dart';
 import 'package:vts_kit_flutter_component_example/screens/dropdowns/dropdown_types.dart';
 import 'package:vts_kit_flutter_component_example/screens/progress_bar/progress_bar.dart';
+import 'package:vts_kit_flutter_component_example/screens/radiobutton/radiobutton.dart';
 import 'package:vts_kit_flutter_component_example/screens/rating_bar/rating_bar.dart';
 import 'package:vts_kit_flutter_component_example/screens/shimmer/shimmer.dart';
 import 'package:vts_kit_flutter_component_example/screens/textfield/textfield.dart';
@@ -20,6 +21,11 @@ import '../screens/tabs/tab_types.dart';
 import '../screens/tiles/tiles_page.dart';
 import '../screens/toast/toasts.dart';
 import '../screens/toggle/toggles.dart';
+import 'bar_chart_style_1/bar_chart_style_1.dart';
+import 'bar_chart_style_2/bar_chart_style_2.dart';
+import 'checkbox/checkbox.dart';
+import 'line_chart_style_1/line_chart_style_1.dart';
+import 'line_chart_style_2/line_chart_style_2.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -239,14 +245,14 @@ class _HomePageState extends State<HomePage> {
     //   'title': 'Shimmer',
     //   'route': ShimmerPage()
     // },
-    // {
-    //   'icon': const IconData(
-    //     0xe906,
-    //     fontFamily: 'GFIconsnew',
-    //   ),
-    //   'title': 'CheckBox',
-    //   'route': CheckBoxPage()
-    // },
+    {
+      'icon': const IconData(
+        0xe906,
+        fontFamily: 'GFIconsnew',
+      ),
+      'title': 'CheckBox',
+      'route': CheckBoxPage()
+    },
     // {
     //   'icon': const IconData(
     //     0xe905,
@@ -255,14 +261,47 @@ class _HomePageState extends State<HomePage> {
     //   'title': 'CheckboxListTile',
     //   'route': CheckBoxListTilePage()
     // },
-    // {
-    //   'icon': const IconData(
-    //     0xe908,
-    //     fontFamily: 'GFIconsnew',
-    //   ),
-    //   'title': 'RadioButton',
-    //   'route': RadioButtonPage()
-    // },
+    {
+      'icon': const IconData(
+        0xe908,
+        fontFamily: 'GFIconsnew',
+      ),
+      'title': 'RadioButton',
+      'route': RadioButtonPage()
+    },
+    {
+      'icon':IconData(
+        0xe412,
+        fontFamily: 'MaterialIcons',
+      ),
+      'title': 'LineChartStyle1',
+      'route': LineChartStyle1()
+
+    },
+    {
+      'icon':IconData(
+        0xe412,
+        fontFamily: 'MaterialIcons',
+      ),
+      'title': 'LineChartStyle2',
+      'route': LineChartStyle2()
+    },
+    {
+      'icon':IconData(
+          0xe0cc,
+          fontFamily: 'MaterialIcons'
+      ),
+      'title': 'BarChartStyle1',
+      'route': BarChartStyle1()
+    },
+    {
+      'icon': IconData(
+          0xf5a9,
+          fontFamily: 'MaterialIcons'
+      ),
+      'title': 'BarChartStyle2',
+      'route': BarChartStyle2()
+    },
     // {
     //   'icon': const IconData(
     //     0xe909,
